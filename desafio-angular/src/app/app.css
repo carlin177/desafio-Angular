@@ -1,0 +1,24 @@
+/* Estilos base de la aplicación (limpios y legibles).
+	 Componentes específicos deben declarar sus propios estilos en sus archivos CSS. */
+
+/* Las variables globales se encuentran en `src/styles.css` para que estén accesibles
+	 desde todos los componentes (evita scoped styles que impiden herencia). */
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: var(--bg);
+	color: var(--text);
+}
+
+/* Contenedor principal gestionado por rutas (no incluir diseños específicos aquí). */
+main { display: block; }
+
+/* Utilidades pequeñas */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+@media (max-width: 480px) {
+	:root { font-size: 14px; }
+}
+

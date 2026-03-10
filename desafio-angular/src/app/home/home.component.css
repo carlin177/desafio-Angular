@@ -1,0 +1,10 @@
+.home-root{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--bg)}
+.home-card{background:var(--surface);padding:2rem;border-radius:12px;box-shadow:0 8px 24px rgba(30,30,30,0.06);max-width:720px;width:100%;text-align:center}
+.home-card h1{margin:0;font-size:2rem;color:var(--text)}
+.lead{color:var(--text-muted);margin-top:0.5rem}
+.home-actions{margin-top:1.25rem}
+.btn{background:var(--primary);color:#fff;border:0;padding:0.6rem 1rem;border-radius:8px;cursor:pointer}
+
+@media (max-width:480px){
+  .home-card{padding:1rem;width:90%}
+}

@@ -1,0 +1,24 @@
+/* Variables globales y estilos base accesibles por toda la app */
+:root {
+	/* Paleta y variables globales — cambia aquí para afectar toda la app */
+	--bg: #f6f7fb;
+	--surface: #ffffff;
+	--text: #111827;        /* color base */
+	--text-main: #333333;   /* color para labels y texto principal */
+	--text-muted: #888888;  /* subtítulos y textos secundarios */
+	--muted: #6b7280;       /* tono secundario */
+	--primary: #4caf50;     /* verde principal */
+	--primary-dark: #3b9b43;/* verde oscuro para hover */
+	--accent: #e67e22;      /* color de acento (naranja) */
+	--border: #e6e6e6;      /* bordes e inputs */
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: var(--bg);
+	color: var(--text);
+}
+
+/* Aquí puedes añadir más estilos globales o importar partials */

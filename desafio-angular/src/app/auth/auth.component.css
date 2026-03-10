@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:host { display: block; }
+.auth-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.auth-card {
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(30,30,30,0.06);
+  max-width: 420px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.auth-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.logo {
+  width: 70px; height: 70px; border-radius: 50%;
+  background: var(--primary); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 1.5rem;
+}
+.titles { flex: 1; }
+.welcome-title {
+  margin: 0;
+  color: var(--accent);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.subtitle { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+.auth-form { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.field { display: block; }
+.label-text { display: block; color: var(--text-main); font-size: 0.85rem; margin-bottom: 0.35rem; }
+.input-wrap {
+  display: flex; align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.45rem 0.5rem; gap: 0.5rem;
+}
+.input-wrap input { border: 0; outline: none; flex: 1; font-size: 0.95rem; font-family: inherit; }
+.left-icon { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; color: var(--muted); }
+.eye { background: transparent; border: 0; padding: 0; margin: 0; color: var(--muted); cursor: pointer; display: flex; align-items: center; }
+
+.btn { width: 100%; padding: 0.7rem; border-radius: 8px; border: 0; font-weight: 600; font-family: 'Poppins', sans-serif; }
+.btn.primary { background: var(--primary); color: #fff; }
+.btn.primary:hover { background: var(--primary-dark); }
+.btn.text { background: transparent; color: var(--text-muted); text-decoration: underline; font-weight: 400; }
+
+.auth-footer { margin-top: 1rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+
+@media (max-width: 480px) {
+  .auth-card { padding: 1rem; border-radius: 10px; width: 90%; }
+  .welcome-title { font-size: 1.05rem; }
+  .logo { width: 60px; height: 60px; font-size: 1.25rem; }
+}
+
+@media (min-width:481px) and (max-width:768px){
+  .auth-card{max-width:400px}
+}
