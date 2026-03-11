@@ -1,9 +1,77 @@
-<div class="home-root">
-  <main class="home-card">
-    <h1>Bienvenido a Codeland</h1>
-    <p class="lead">Estás dentro. Empieza a construir cosas increíbles.</p>
-    <div class="home-actions">
-      <button class="btn" (click)="logout()">Cerrar sesión</button>
+<div class="home-container">
+  <aside class="left-panel">
+    <div class="actions-grid" role="grid" aria-label="Acciones principales">
+      <button class="action-card" aria-label="Vender">
+        <div class="action-icon">
+          <img src="/VENDER.png" alt="Vender">
+        </div>
+        <div class="action-text">Vender</div>
+      </button>
+
+      <button class="action-card" aria-label="Cobrar">
+        <div class="action-icon">
+          <img src="/COBRAR.png" alt="Cobrar">
+        </div>
+        <div class="action-text">Cobrar</div>
+      </button>
+
+      <button class="action-card" aria-label="Precios">
+        <div class="action-icon">
+          <img src="/PRECIOS.png" alt="Precios">
+        </div>
+        <div class="action-text">Precios</div>
+      </button>
+
+      <button class="action-card" aria-label="Cajas">
+        <div class="action-icon">
+          <img src="/cajas.png" alt="Cajas">
+        </div>
+        <div class="action-text">Cajas</div>
+      </button>
+    </div>
+  </aside>
+
+  <main class="center-panel">
+    <div class="center-inner">
+      <img class="center-logo" src="/logo/logo2.png" alt="Logo Codeland">
+      <h1 class="brand">CODELAND</h1>
+      <p class="tagline">Porque tu negocio sí importa...</p>
     </div>
   </main>
+
+  <aside class="right-panel">
+    <div class="right-card">
+      <div class="info-group">
+        <label class="info-label">Nombre de Equipo</label>
+        <div class="info-field" aria-hidden="true"></div>
+      </div>
+
+      <div class="info-group">
+        <label class="info-label">Usuario</label>
+        <div class="info-field" aria-hidden="true"></div>
+      </div>
+
+      <div class="info-group">
+        <label class="info-label">Inicio de Sesión</label>
+        <div class="info-field" aria-hidden="true"></div>
+      </div>
+
+      <div class="info-group">
+        <label class="info-label">Puesto de Trabajo</label>
+        <div class="info-field" aria-hidden="true"></div>
+      </div>
+
+      <div class="info-group">
+        <label class="info-label">Turno</label>
+        <div class="info-field" aria-hidden="true"></div>
+      </div>
+
+      <div class="close-wrapper">
+        <button class="close-button" aria-label="Cerrar sesión">
+          <img class="close-icon" src="/cerrar.jpg" alt="Cerrar">
+          <span class="close-text">Cerrar</span>
+        </button>
+      </div>
+    </div>
+  </aside>
 </div>
