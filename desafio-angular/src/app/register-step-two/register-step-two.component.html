@@ -1,0 +1,34 @@
+<main class="register-page">
+  <section class="register-card" aria-label="Formulario de registro paso 2 de 2">
+    <header class="register-header">
+      <a routerLink="/registro" class="back-link" aria-label="Volver a autenticación">&lt;- volver</a>
+      <h1 class="register-title">crear cuenta(2/2)</h1>
+      <span aria-hidden="true"></span>
+    </header>
+
+    <section class="owner-data" aria-labelledby="business-data-title">
+      <h2 id="business-data-title">datos del negocio</h2>
+
+      <form class="register-form" novalidate>
+        <div class="field-group">
+          <label for="nombreNegocio">nombre del negocio</label>
+          <input id="nombreNegocio" name="nombreNegocio" type="text" />
+        </div>
+
+        <div class="field-group">
+          <label for="rubro">rubro</label>
+          <input id="rubro" name="rubro" type="text" />
+        </div>
+
+        <p class="creation-summary-title">se creara automaticamte</p>
+        <ul class="creation-summary-list">
+          <li>tu cuenta.</li>
+          <li>tu negocio.</li>
+          <li>tu plan free activado</li>
+        </ul>
+
+        <button type="button" class="next-button" routerLink="/selector-negocios">crear cuenta</button>
+      </form>
+    </section>
+  </section>
+</main>

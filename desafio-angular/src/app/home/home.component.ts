@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  // Maqueta visual únicamente: no hay lógica en TypeScript
+  constructor(private router: Router) {}
+
+  cerrarSesion(): void {
+    this.router.navigate(['/auth']);
+  }
 }

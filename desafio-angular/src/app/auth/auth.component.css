@@ -1,7 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-:host { display: block; }
+/*
+  Guia rapida de personalizacion:
+  - Cambiar redondeo general: --card-radius y --field-radius
+  - Cambiar espacios internos: --card-padding y --mobile-card-padding
+  - Cambiar sombra de la tarjeta: --card-shadow
+  - Ajustar version mobile: --mobile-card-radius y @media (max-width: 480px)
+  - Colores principales: se heredan de variables globales (ej: --bg, --surface, --primary)
+*/
+
+/* Variables locales del componente para editar estilos rapido sin cambiar reglas */
+:host {
+  display: block;
+  --card-radius: 12px;
+  --card-padding: 2rem;
+  --card-shadow: 0 8px 24px rgba(30, 30, 30, 0.06);
+  --field-radius: 8px;
+  --mobile-card-radius: 10px;
+  --mobile-card-padding: 1rem;
+}
+
+/* Contenedor principal centrado en pantalla */
 .auth-root {
   min-height: 100vh;
   display: flex;
@@ -11,23 +31,43 @@
   padding: 2rem;
   box-sizing: border-box;
 }
+
+/* Tarjeta del formulario */
 .auth-card {
   background: var(--surface);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(30,30,30,0.06);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
   max-width: 420px;
   width: 100%;
-  padding: 2rem;
+  padding: var(--card-padding);
   box-sizing: border-box;
 }
-.auth-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-.logo {
-  width: 70px; height: 70px; border-radius: 50%;
-  background: var(--primary); color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 600; font-size: 1.5rem;
+
+/* Encabezado con logo y textos */
+.auth-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-.titles { flex: 1; }
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.titles {
+  flex: 1;
+}
+
 .welcome-title {
   margin: 0;
   color: var(--accent);
@@ -35,33 +75,127 @@
   font-weight: 600;
   font-size: 1.25rem;
 }
-.subtitle { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
 
-.auth-form { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
-.field { display: block; }
-.label-text { display: block; color: var(--text-main); font-size: 0.85rem; margin-bottom: 0.35rem; }
+.subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Estructura del formulario */
+.auth-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.field {
+  display: block;
+}
+
+.label-text {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Campo con icono lateral */
 .input-wrap {
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
   border: 1px solid var(--border);
-  border-radius: 8px; padding: 0.45rem 0.5rem; gap: 0.5rem;
+  border-radius: var(--field-radius);
+  padding: 0.45rem 0.5rem;
+  gap: 0.5rem;
 }
-.input-wrap input { border: 0; outline: none; flex: 1; font-size: 0.95rem; font-family: inherit; }
-.left-icon { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; color: var(--muted); }
-.eye { background: transparent; border: 0; padding: 0; margin: 0; color: var(--muted); cursor: pointer; display: flex; align-items: center; }
 
-.btn { width: 100%; padding: 0.7rem; border-radius: 8px; border: 0; font-weight: 600; font-family: 'Poppins', sans-serif; }
-.btn.primary { background: var(--primary); color: #fff; }
-.btn.primary:hover { background: var(--primary-dark); }
-.btn.text { background: transparent; color: var(--text-muted); text-decoration: underline; font-weight: 400; }
+.input-wrap input {
+  border: 0;
+  outline: none;
+  flex: 1;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
 
-.auth-footer { margin-top: 1rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+.left-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: var(--muted);
+}
 
+.eye {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Botones base y variantes */
+.btn {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: var(--field-radius);
+  border: 0;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+/* Se mantiene este selector porque ya existe en el markup original del proyecto */
+.btn.text {
+  background: transparent;
+  color: var(--text-muted);
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* Pie opcional del formulario */
+.auth-footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Ajustes para pantallas pequenas */
 @media (max-width: 480px) {
-  .auth-card { padding: 1rem; border-radius: 10px; width: 90%; }
-  .welcome-title { font-size: 1.05rem; }
-  .logo { width: 60px; height: 60px; font-size: 1.25rem; }
+  .auth-card {
+    padding: var(--mobile-card-padding);
+    border-radius: var(--mobile-card-radius);
+    width: 90%;
+  }
+
+  .welcome-title {
+    font-size: 1.05rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    font-size: 1.25rem;
+  }
 }
 
-@media (min-width:481px) and (max-width:768px){
-  .auth-card{max-width:400px}
+/* Ajuste intermedio para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .auth-card {
+    max-width: 400px;
+  }
 }

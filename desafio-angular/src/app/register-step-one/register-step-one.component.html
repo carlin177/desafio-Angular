@@ -1,0 +1,42 @@
+<main class="register-page">
+  <section class="register-card" aria-label="Formulario de registro paso 1 de 2">
+    <header class="register-header">
+      <a routerLink="/auth" class="back-link" aria-label="Volver a autenticación">&lt;- volver</a>
+      <h1 class="register-title">crear cuenta(1/2)</h1>
+      <span aria-hidden="true"></span>
+    </header>
+
+    <section class="owner-data" aria-labelledby="owner-data-title">
+      <h2 id="owner-data-title">datos del propietario</h2>
+
+      <form class="register-form" novalidate>
+        <div class="field-group">
+          <label for="nombre">nombre</label>
+          <input id="nombre" name="nombre" type="text" />
+        </div>
+
+        <div class="field-group">
+          <label for="apellido">apellido</label>
+          <input id="apellido" name="apellido" type="text" />
+        </div>
+
+        <div class="field-group">
+          <label for="cuit">CUIT</label>
+          <input id="cuit" name="cuit" type="text" inputmode="numeric" />
+        </div>
+
+        <div class="field-group">
+          <label for="contrasena">contraseña</label>
+          <input id="contrasena" name="contrasena" type="password" />
+        </div>
+
+        <div class="field-group">
+          <label for="repetirContrasena">repetir contraseña</label>
+          <input id="repetirContrasena" name="repetirContrasena" type="password" />
+        </div>
+
+        <button type="button" class="next-button" routerLink="/registro/paso-2">siguiente -></button>
+      </form>
+    </section>
+  </section>
+</main>

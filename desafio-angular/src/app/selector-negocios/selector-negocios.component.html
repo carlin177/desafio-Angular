@@ -1,0 +1,27 @@
+<main class="selector-page">
+  <section class="selector-card" aria-label="Seleccion de negocios">
+    <header class="selector-header">
+      <p>¿A qué negocio quieres ingresar?</p>
+    </header>
+
+    <section class="negocios-list" aria-label="Lista de negocios disponibles">
+      <button
+        type="button"
+        class="negocio-item"
+        *ngFor="let negocio of negocios"
+        aria-label="Ingresar al negocio"
+      >
+        <div class="negocio-icono" aria-hidden="true">🏪</div>
+
+        <div class="negocio-info">
+          <h2>{{ negocio.nombre }}</h2>
+          <p>plan {{ negocio.plan }} {{ negocio.sucursales }} sucursales</p>
+        </div>
+
+        <div class="negocio-flecha" aria-hidden="true">&gt;</div>
+      </button>
+    </section>
+
+    <a class="back-link" routerLink="/registrar/paso-dos">+agregar otro negocio</a>
+  </section>
+</main>
